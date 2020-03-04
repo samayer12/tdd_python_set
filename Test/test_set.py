@@ -12,5 +12,10 @@ class MyTestCase(unittest.TestCase):
     def test_create_returns_correct_length(self):
         self.assertEqual(10, Set(10).getSize())
 
+    def test_add_element_to_empty_set(self):
+        self.assertEqual([1], Set().add(1))
+
+
+
 if __name__ == '__main__':
     unittest.main()

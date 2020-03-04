@@ -8,3 +8,8 @@ class Set:
 
     def getSize(self):
         return 10
+
+    def add(self, element):
+        if (self.data).__eq__(None):
+            self.data = [element]
+        return self.data
