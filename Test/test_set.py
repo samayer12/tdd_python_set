@@ -9,8 +9,5 @@ class MyTestCase(unittest.TestCase):
     def test_create_returns_default_contents(self):
         self.assertEqual(([None] * 10), Set.create(self, 10))
 
-
-    # def test_create_returns_correct_length(self):
-    #     self.assertEqual(10, Set.create(10))
 if __name__ == '__main__':
     unittest.main()
