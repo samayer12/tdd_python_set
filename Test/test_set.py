@@ -8,6 +8,9 @@ class SetTestCase(unittest.TestCase):
     def setUp(self):
         self.testset = Set()
 
+    def tearDown(self):
+        del self.testset
+
     def test_default_create_returns_empty_set(self):
         self.assertEqual([], Set().data)
 
