@@ -25,4 +25,8 @@ class Set:
             self.data.append(element)
 
     def remove(self, element):
-        self.data.remove(element)
+        try:
+            self.data.remove(element)
+        except ValueError:
+            # Element was not in list
+            pass

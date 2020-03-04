@@ -60,5 +60,9 @@ class SetTestCase(unittest.TestCase):
         # Assert
         self.assertNotIn(3, self.testset.data)
 
+    def test_remove_absent_element_is_ok(self):
+        self.testset.remove(10)
+        self.assertEquals([], self.testset.data)
+
 if __name__ == '__main__':
     unittest.main()
