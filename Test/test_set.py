@@ -45,8 +45,11 @@ class SetTestCase(unittest.TestCase):
         self.assertEqual(1, self.testset.getSize())
 
     def test_get_capacity_of_list(self):
+        # Arrange
         self.testset = Set(size=10)
+        # Act
         self.testset.add(1)
+        # Assert
         self.assertEqual(9, self.testset.getCapacity())
 
 if __name__ == '__main__':
