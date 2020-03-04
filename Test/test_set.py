@@ -2,7 +2,12 @@ import unittest
 from Src.set import Set
 
 
-class MyTestCase(unittest.TestCase):
+class SetTestCase(unittest.TestCase):
+
+    # Arrange for all test cases
+    def setUp(self):
+        self.testset = Set()
+
     def test_default_create_returns_empty_set(self):
         self.assertEqual([], Set().data)
 
@@ -13,19 +18,16 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(10, Set(10).getSize())
 
     def test_add_element_to_empty_set(self):
-        # Arrange
-        testset = Set()
         # Act
-        testset.add(1)
+        self.testset.add(1)
         # Assert
-        self.assertEqual([1], testset.data)
+        self.assertEqual([1], self.testset.data)
 
     def test_add_new_element_to_nonempty_set(self):
-        # Arrange
-        testset = Set()
+
         # Act
-        testset.add(1)
-        testset.add(2)
+        self.testset.add(1)
+        self.testset.add(2)
         # Assert
         self.assertEqual([1, 2], testset.data)
 
