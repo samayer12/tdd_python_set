@@ -12,4 +12,3 @@ class Set:
     def add(self, element):
         if (self.data).__eq__(None):
             self.data = [element]
-        return self.data

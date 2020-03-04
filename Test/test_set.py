@@ -13,8 +13,12 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(10, Set(10).getSize())
 
     def test_add_element_to_empty_set(self):
-        self.assertEqual([1], Set().add(1))
-
+        # Arrange
+        testSet = Set()
+        # Act
+        testSet.add(1)
+        # Assert
+        self.assertEqual([1], testSet.data)
 
 
 if __name__ == '__main__':
