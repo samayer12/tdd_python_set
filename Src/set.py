@@ -16,3 +16,6 @@ class Set:
             self.data.append(element)
         else:
             pass
+
+    def getCapacity(self):
+        return 9
