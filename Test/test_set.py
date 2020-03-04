@@ -37,6 +37,7 @@ class SetTestCase(unittest.TestCase):
         self.testset.add(1)
         # Assert
         self.assertEqual([1], self.testset.data)
+        self.assertEqual(1, self.testset.getSize())
 
 if __name__ == '__main__':
     unittest.main()
