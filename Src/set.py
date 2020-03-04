@@ -13,9 +13,13 @@ class Set:
         if self.data.__eq__([]):
             self.data = [element]
         elif element not in self.data:
-            self.data.append(element)
+            if self.data[-1] is None:
+                replacement_index = self.data.index(None)
+                self.data[replacement_index] = element
+            else:
+                self.data.append(element)
         else:
             pass
 
     def getCapacity(self):
-        return 9
+        return self.data.count(None)
