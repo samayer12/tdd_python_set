@@ -1,7 +1,8 @@
 class Set:
 
-    def create(self):
+    def create(self, size=None):
+        if size is None:
+            return []
+        else:
+            return [None] * size
         return []
-
-    def create(self, size):
-        return [None] * 10
