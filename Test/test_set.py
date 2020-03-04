@@ -10,8 +10,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(([None] * 10), Set(size=10).data)
 
     def test_create_returns_correct_length(self):
-        testSet = Set.create(10)
-        self.assertEqual(10, testSet.getSize())
+        self.assertEqual(10, Set(10).getSize())
 
 if __name__ == '__main__':
     unittest.main()
