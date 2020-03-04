@@ -7,7 +7,7 @@ class Set:
             self.data = [None] * size
 
     def getSize(self):
-        return 10
+        return len(self.data)
 
     def add(self, element):
         if self.data.__eq__([]):
