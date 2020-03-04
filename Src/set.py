@@ -12,5 +12,7 @@ class Set:
     def add(self, element):
         if self.data.__eq__([]):
             self.data = [element]
-        else:
+        elif element not in self.data:
             self.data.append(element)
+        else:
+            pass
