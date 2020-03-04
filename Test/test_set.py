@@ -29,7 +29,14 @@ class SetTestCase(unittest.TestCase):
         self.testset.add(1)
         self.testset.add(2)
         # Assert
-        self.assertEqual([1, 2], testset.data)
+        self.assertEqual([1, 2], self.testset.data)
+
+    def test_add_existing_element_without_changing_size(self):
+        # Act
+        self.testset.add(1)
+        self.testset.add(1)
+        # Assert
+        self.assertEqual([1], self.testset.data)
 
 if __name__ == '__main__':
     unittest.main()
