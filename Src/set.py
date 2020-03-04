@@ -23,3 +23,6 @@ class Set:
             self.data[self.__findEmpty__()] = element
         elif element not in self.data:
             self.data.append(element)
+
+    def remove(self, element):
+        self.data.remove(element)

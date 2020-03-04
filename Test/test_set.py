@@ -52,5 +52,13 @@ class SetTestCase(unittest.TestCase):
         # Assert
         self.assertEqual(9, self.testset.getCapacity())
 
+    def test_remove_existing_element_from_set(self):
+        # Arrange
+        self.testset.add(3)
+        # Act
+        self.testset.remove(3)
+        # Assert
+        self.assertNotIn(3, self.testset.data)
+
 if __name__ == '__main__':
     unittest.main()
