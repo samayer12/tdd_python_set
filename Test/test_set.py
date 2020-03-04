@@ -22,6 +22,7 @@ class SetTestCase(unittest.TestCase):
         self.testset.add(1)
         # Assert
         self.assertEqual([1], self.testset.data)
+        self.assertEqual(1, self.testset.getSize())
 
     def test_add_new_element_to_nonempty_set(self):
 
@@ -30,6 +31,7 @@ class SetTestCase(unittest.TestCase):
         self.testset.add(2)
         # Assert
         self.assertEqual([1, 2], self.testset.data)
+        self.assertEqual(2, self.testset.getSize())
 
     def test_add_existing_element_without_changing_size(self):
         # Act
