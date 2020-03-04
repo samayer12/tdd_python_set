@@ -1,11 +1,10 @@
 class Set:
-    myData = None
-    def create(self, size=None):
+
+    def __init__(self, size=None):
         if size is None:
-            myData = []
+            self.data = []
         else:
-            myData = [None] * size
-        return myData
+            self.data = [None] * size
 
     def getSize(self):
         return 10
