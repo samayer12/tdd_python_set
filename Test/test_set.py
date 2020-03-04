@@ -14,12 +14,20 @@ class MyTestCase(unittest.TestCase):
 
     def test_add_element_to_empty_set(self):
         # Arrange
-        testSet = Set()
+        testset = Set()
         # Act
-        testSet.add(1)
+        testset.add(1)
         # Assert
-        self.assertEqual([1], testSet.data)
+        self.assertEqual([1], testset.data)
 
+    def test_add_new_element_to_nonempty_set(self):
+        # Arrange
+        testset = Set()
+        # Act
+        testset.add(1)
+        testset.add(2)
+        # Assert
+        self.assertEqual([1, 2], testset.data)
 
 if __name__ == '__main__':
     unittest.main()

@@ -10,5 +10,7 @@ class Set:
         return 10
 
     def add(self, element):
-        if (self.data).__eq__(None):
+        if self.data.__eq__([]):
             self.data = [element]
+        else:
+            self.data.append(element)
