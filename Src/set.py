@@ -1,8 +1,11 @@
 class Set:
-
+    myData = None
     def create(self, size=None):
         if size is None:
-            return []
+            myData = []
         else:
-            return [None] * size
-        return []
+            myData = [None] * size
+        return myData
+
+    def getSize(self):
+        return 10
